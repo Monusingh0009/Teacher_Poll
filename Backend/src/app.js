@@ -28,11 +28,12 @@ mongoose
   .catch((e) => {
     console.error("Failed to connect to MongoDB:", e);
   });
-
+  
+const allowedOrigins=['http://localhost:5173','https://live-polling-system-gold.vercel.app']
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: "allowedOrigins",
     methods: ["GET", "POST"],
     credentials: true,
   },
