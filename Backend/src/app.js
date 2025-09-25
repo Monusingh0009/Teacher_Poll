@@ -33,7 +33,7 @@ const allowedOrigins=['http://localhost:5173','https://live-polling-system-gold.
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "allowedOrigins",
+    origin: allowedOrigins,
     methods: ["GET", "POST"],
     credentials: true,
   },
