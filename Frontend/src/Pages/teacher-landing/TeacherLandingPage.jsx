@@ -5,7 +5,7 @@ import eyeIcon from "../../assets/eye.svg";
 import { useNavigate } from "react-router-dom";
 import { io } from "socket.io-client";
 
-const apiUrl = import.meta.env.VITE_API_BASE_URL || "https://intervue-y4pz.onrender.com";
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 const socket = io(apiUrl, { transports: ["websocket"] });
 
 const defaultEmptyOptions = () => [
