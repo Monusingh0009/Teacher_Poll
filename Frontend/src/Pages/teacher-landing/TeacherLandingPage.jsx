@@ -5,7 +5,7 @@ import eyeIcon from "../../assets/eye.svg";
 import { useNavigate } from "react-router-dom";
 import { io } from "socket.io-client";
 
-const apiUrl = import.meta.env.VITE_API_BASE_URL;
+const apiUrl = import.meta.env.VITE_API_BASE_URL || "https://live-polling-system-backend-az10.onrender.com";
 const socket = io(apiUrl, { transports: ["websocket"] });
 
 const defaultEmptyOptions = () => [
